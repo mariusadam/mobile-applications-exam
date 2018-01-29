@@ -5,29 +5,18 @@ import PopularReddits from './components/PopularReddits';
 import TaskList from './components/TaskList';
 import TaskCreate from './components/TaskCreate';
 import TaskEdit from './components/TaskEdit';
+import Homepage from './components/Homepage';
+import Report from './components/Report';
 
 export default RouterComponent = () => (
     <Router>
-      <Scene key={'root'} hideNavBar>
-        <Scene key={'auth'}>
-          <Scene key={'login'} component={LoginForm} title={'Login'}/>
-        </Scene>
-
-        <Scene key={'main'}>
-          {/*<Scene key={'popularReddits'} component={PopularReddits} title={'Popular reddits'}/>*/}
-
-          <Scene
-            onRight={() => Actions.taskCreate()}
-            rightTitle={"Add"}
-            key={"taskList"}
-            component={TaskList}
-            title={"Tasks"}
-            initial
-          />
-          <Scene key={'taskCreate'} component={TaskCreate} title={'Create task'}/>
-          <Scene key={'taskEdit'} component={TaskEdit} title={'Edit task'}/>
-
-        </Scene>
+      <Scene key={'root'}
+             onRight={() => Actions.report()}
+             rightTitle={'Report'}
+             title={'Inventory'}
+      >
+        <Scene key={'homepage'} component={Homepage} title={'Homepage'}/>
+        <Scene key={'report'} component={Report} title={'Reports'}/>
       </Scene>
     </Router>
 );
