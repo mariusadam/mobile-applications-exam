@@ -1,0 +1,3 @@
+rootProject.name = 'PracticMobile'
+
+include ':app'
