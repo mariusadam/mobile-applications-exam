@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import TaskForm from './TaskForm';
 import {Card, CardSection, Spinner} from './common';
 import {Text, View} from 'react-native';
 import {reportFetch} from '../actions';

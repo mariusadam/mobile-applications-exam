@@ -4,14 +4,13 @@ import {ListView, Text, View} from 'react-native';
 import {connect} from 'react-redux';
 import ProductListItem from './ProductListItem';
 import {productsFetch} from '../actions';
-import Task from '../model/Task';
 import {Spinner} from './common';
 
 class ProductList extends Component {
   componentWillMount() {
     console.log('Product list has props', this.props);
 
-    setInterval(() => this.fetchProductsHandler(), 3000);
+    setInterval(() => this.fetchProductsHandler(), 1000);
 
     this.createDataSource(this.props);
   }
@@ -40,10 +39,10 @@ class ProductList extends Component {
   render() {
     console.log('Rendering task list');
 
-    if (this.props.isLoading) {
-      console.log('Showing the loader');
-      return <Spinner size={'large'}/>;
-    }
+    // if (this.props.isLoading) {
+    //   console.log('Showing the loader');
+    //   return <Spinner size={'large'}/>;
+    // }
     if (this.props.error) {
       console.log('Showing the error');
       return (

@@ -10,7 +10,6 @@ import {
 import {Button, CardSection, Confirm} from './common';
 import {connect} from 'react-redux';
 import {productSelected} from '../actions';
-import {Actions} from 'react-native-router-flux';
 
 class ProductListItem extends Component {
 
@@ -25,7 +24,6 @@ class ProductListItem extends Component {
             {this.renderText()}
           </TouchableNativeFeedback>
         </CardSection>
-
     );
   }
 

@@ -19,7 +19,7 @@ class Homepage extends Component {
               <Input
                   value={this.props.location}
                   label={'Location'}
-                  placeholder={'hala 1'}
+                  placeholder={''}
                   onChangeText={this.props.locationChanged}
               />
             </CardSection>
@@ -28,7 +28,7 @@ class Homepage extends Component {
               <Input
                   value={this.props.text}
                   label={'Text'}
-                  placeholder={'abc...'}
+                  placeholder={''}
                   onChangeText={this.props.textChanged}
               />
             </CardSection>

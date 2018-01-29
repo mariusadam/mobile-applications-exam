@@ -72,12 +72,12 @@ export const reportFetch = (location) => {
     const requestUrl = `${API_HOST}/Product/report?location=${location}`;
     console.log('Requesting reports', requestUrl);
     fetch(requestUrl).
-        then(res => res.text()).
+        then(res => res.json()).
         then(response => {
           console.log('Received reports', response);
           dispatch({
             type: REPORT_FETCH_SUCCESS,
-            payload: response,
+            payload: response.report.replace('\\n', '\n'),
           });
         }).catch(({code, message}) => {
       dispatch({
