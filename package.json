@@ -9,7 +9,7 @@
   "dependencies": {
     "dateformat": "^3.0.2",
     "firebase": "^4.8.2",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.13",
     "react": "16.2.0",
     "react-native": "0.52.0",
     "react-native-communications": "^2.2.1",
