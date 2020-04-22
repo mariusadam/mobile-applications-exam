@@ -14,12 +14,12 @@ const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
 export default class App extends Component {
   componentWillMount() {
     const config = {
-      apiKey: 'AIzaSyBY9Rz3tFcxgIbdvDcvnm44tPN8cu1iodI',
-      authDomain: 'manager-f3b5d.firebaseapp.com',
-      databaseURL: 'https://manager-f3b5d.firebaseio.com',
-      projectId: 'manager-f3b5d',
-      storageBucket: 'manager-f3b5d.appspot.com',
-      messagingSenderId: '359332312395',
+      apiKey: '',
+      authDomain: '',
+      databaseURL: '',
+      projectId: '',
+      storageBucket: '',
+      messagingSenderId: '',
     };
 
     firebase.initializeApp(config);
